@@ -11,7 +11,7 @@ using SareeDesigns.Data;
 namespace SareeDesigns.Migrations
 {
     [DbContext(typeof(SareeDesignsContext))]
-    [Migration("20241204081249_init")]
+    [Migration('20241204081249_init')]
     partial class init
     {
         /// <inheritdoc />
@@ -19,35 +19,35 @@ namespace SareeDesigns.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.11")
-                .HasAnnotation("Relational:MaxIdentifierLength", 63);
+                .HasAnnotation('ProductVersion', '8.0.11')
+                .HasAnnotation('Relational:MaxIdentifierLength', 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("SareeDesigns.Models.Saree", b =>
+            modelBuilder.Entity('SareeDesigns.Models.Saree', b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>('Id')
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType('integer');
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>('Id'));
 
-                    b.Property<string>("Name")
+                    b.Property<string>('Name')
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType('text');
 
-                    b.Property<int>("Price")
-                        .HasColumnType("integer");
+                    b.Property<int>('Price')
+                        .HasColumnType('integer');
 
-                    b.Property<string>("SavedFileName")
-                        .HasColumnType("text");
+                    b.Property<string>('SavedFileName')
+                        .HasColumnType('text');
 
-                    b.Property<string>("SavedUrl")
-                        .HasColumnType("text");
+                    b.Property<string>('SavedUrl')
+                        .HasColumnType('text');
 
-                    b.HasKey("Id");
+                    b.HasKey('Id');
 
-                    b.ToTable("Saree");
+                    b.ToTable('Saree');
                 });
 #pragma warning restore 612, 618
         }
