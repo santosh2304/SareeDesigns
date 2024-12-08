@@ -14,7 +14,6 @@
     - push
     - '$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA'
   id: push
-
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
   args:
     - 'run'
